@@ -3,62 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>page</title>
+    <title>Divyansh Gendu</title>
     <style>
-        *
-        {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
-        .hero
-        {
+        body {
+            line-height: 1.6;
+        }
+        .hero {
             height: 100vh;
             width: 100%;
             background-image: url(./background.jpg);
             background-size: cover;
             background-position: center;
-        }
-        nav
-        {
             display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        nav {
+            display: flex;
+            flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
-            padding-top: 40px;
-            padding-left: 10%;
-            padding-right: 10%;
+            padding: 20px 5%;
+            background: rgba(0, 0, 0, 0.6);
         }
-        .logo
-        {
-            color: black;
-            font-size: 28px;
+        .logo {
+            color: white;
+            font-size: 1.5rem;
         }
-        span
-        {
+        .logo span {
             color: red;
         }
-        nav ul li
-        {
-            list-style-type: none;
-            display: inline-block;
-            padding: 10px 20px;
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
-
-        nav ul li a
-        {
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
             color: white;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s;
         }
-        nav ul li a:hover
-        {
+        nav ul li a:hover {
             color: red;
-            transition: 0.3s;
         }
-
-        button
-        {
+        button {
             background-color: darkcyan;
             color: white;
             border: none;
@@ -66,133 +66,95 @@
             border-radius: 20px;
             cursor: pointer;
             font-weight: bold;
-            transition: .1s;
-            justify-content: space-between;
+            transition: background-color 0.3s;
         }
         button:hover {
             background-color: gray;
         }
-        footer
-        {
+        img {
+            max-width: 100px;
+            border-radius: 50%;
+            border: 3px solid darkcyan;
+            display: block;
+            margin: 20px auto;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            color: darkblue;
+            margin-top: 10px;
+        }
+        fieldset {
+            margin: 20px auto;
+            padding: 20px;
+            border: 3px solid darkcyan;
+            max-width: 90%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        fieldset legend {
+            color: darkblue;
+            font-size: 1.5rem;
+        }
+        fieldset p {
+            font-size: 1rem;
+            color: black;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
             background-color: black;
             color: wheat;
-            text-align: center;
-            padding: 10px;
         }
-        .contact
-        {
-            display: block;
-            flex-direction: column;
-        }
-        .contact a
-        {
-            color: white;
-        }
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        /* Style the button (link in this case) */
-        .dropdown-link {
+        footer .contact a {
+            color: wheat;
             text-decoration: none;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
+        }
+        footer .contact i {
+            margin-right: 5px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 20px 5%;
+        }
+        .gallery img {
+            max-width: 100%;
+            height: auto;
             border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            display: block;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
         }
 
-        /* Change color on hover */
-        .dropdown-link:hover {
-            background-color: #0056b3;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: white;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            border-radius: 5px;
-            padding: 10px 0;
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            text-decoration: none;
-            display: block;
-            padding: 10px 20px;
-            color: #333;
-            transition: background-color 0.3s;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-        }
-
-        /* Show the dropdown content when hovering over the parent */
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        img
-        {
-            margin-top: 25px;
-            height: 100px;
-            width: 100px;
-            border-radius: 25%;
-            border: 3.5px solid ;
-            display: flexbox;
-            float: left;
-            margin-left: 50px;
-        
-        }
-        img:hover {
-        transform: scale(1.1);
-        transition: transform 0.2s;
-        }
-        h1
-        {
-            text-align: center;
-            margin-top: 50px;
-            
-            box-shadow: 0 4px 20px;
-            margin-left: 15px;
-            margin-right: 15px;
-        }
-    fieldset 
-    {
-        margin-top: 90px;
-        color: whitesmoke;
-        font-weight: bold;
-        font-size: 20px;
-        border: 5px solid darkcyan;
-        box-shadow: 0 4px 20px;
-        margin-left: 15px;
-        margin-right: 15px;
-    }
-    fieldset span
-    {
-        color: darkblue;
-        font-size: 25px;
-    }
-    fieldset legend
-    {
-        color: darkblue;
-    }
-
-    @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(-20px);
+        @media (max-width: 768px) {
+            .hero {
+                text-align: center;
             }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin: 5px 0;
+            }
+            button {
+                margin: 5px 0;
+            }
+        }
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.2rem;
+            }
+            h1 {
+                font-size: 1.5rem;
             }
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="hero">
@@ -203,259 +165,38 @@
                 <li><a href="#">About</a></li>
                 <li><a href="#">Portfolio</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li class="dropdown"><a href="#" class="dropdown-link">Activity 1A</a>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-link">Activity 1A</a>
                     <div class="dropdown-content">
                         <a href="activity1.html">Activity 1</a>
                         <a href="activity2.html">Activity 2</a>
                         <a href="activity3.html">Activity 3</a>
                     </div>
                 </li>
-                <li class="dropdown"><a href="#" class="dropdown-link">Activity 1B</a>
-                    <div class="dropdown-content">
-                        <a href="ACTIVITY21.12.2024 (1).pdf">Activity 4</a>
-                        <a href="#">Activity 5</a>
-                    </div>
-                </li>
-                <li class="dropdown"><a href="#" class="dropdown-link">Activity 1C</a>
-                    <div class="dropdown-content">
-                        <a href="c1.html">Activity 6a form1</a>
-                        <a href="loginform.html">Activity 6b form1</a>
-                       
-                        <a href="copyform2.html">Activity 6 form2</a>
-                         <a href="activity7.html">Activity 7</a>
-                    </div>
-                </li>
                 <button><a href="c1.html">Sign Up</a></button>
-                <button><a href="loginform.html">Login In</a> </button>
+                <button><a href="loginform.html">Login</a></button>
             </ul>
         </nav>
-
-            <img src="df.jpg" alt="my photo">
-            <h1>DIVYANSH YADAV</h1>
-
-            <fieldset>
-                <legend>About</legend>
-                <label for="">
-                    <p>
-                        Hello! My name is <span class="highlight">Divyansh Yadav</span>. 
-                        I am passionate about technology, coding, and creating innovative solutions. 
-                        My journey in the field of software development started when I was young and curious 
-                        about how things work. I believe in the power of <span class="highlight">perseverance</span> 
-                        and continuous learning.
-                    </p>
-                </label>
-            </fieldset>
-
-            <div>
-                <div>
-                    <div>
-                        <sector>
-                            <img src="https://picsum.photos/200/300"
-                        </sector>
-                    </div>
-                </div>
-            </div>
-
-
-            <div>
-                <div>
-                    <div>
-                        <sector>
-                            <img src="https://picsum.photos/200/300"
-                        </sector>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                    <div>
-                        <sector>
-                            <img src="https://picsum.photos/200/300"
-                        </sector>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                    <div>
-                        <sector>
-                            <img src="https://picsum.photos/200/300"
-                        </sector>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                    <div>
-                        <sector>
-                            <img src="https://picsum.photos/200/300"
-                        </sector>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                    <div>
-                        <sector>
-                            <img src="https://picsum.photos/200/300"
-                        </sector>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                    <div>
-                        <sector>
-                            <img src="https://picsum.photos/200/300"
-                        </sector>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                    <div>
-                        <sector>
-                            <img src="https://picsum.photos/200/300"
-                        </sector>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                    <div>
-                        <sector>
-                            <img src="https://picsum.photos/200/300"
-                        </sector>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                    <div>
-                        <sector>
-                            <img src="https://picsum.photos/200/300"
-                        </sector>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                    <div>
-                        <sector>
-                            <img src="https://picsum.photos/200/300"
-                        </sector>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                    <div>
-                        <sector>
-                            <img src="https://picsum.photos/200/300"
-                        </sector>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                    <div>
-                        <sector>
-                            <img src="https://picsum.photos/200/300"
-                        </sector>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                    <div>
-                        <sector>
-                            <img src="https://picsum.photos/200/300"
-                        </sector>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                    <div>
-                        <sector>
-                            <img src="https://picsum.photos/200/300"
-                        </sector>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                    <div>
-                        <sector>
-                            <img src="https://picsum.photos/200/300"
-                        </sector>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                    <div>
-                        <sector>
-                            <img src="https://picsum.photos/200/300"
-                        </sector>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                    <div>
-                        <sector>
-                            <img src="https://picsum.photos/200/300"
-                        </sector>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                    <div>
-                        <sector>
-                            <img src="https://picsum.photos/200/300"
-                        </sector>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                    <div>
-                        <sector>
-                            <img src="https://picsum.photos/200/300"
-                        </sector>
-                    </div>
-                </div>
-            </div>
+        <img src="df.jpg" alt="My Photo">
+        <h1>DIVYANSH YADAV</h1>
+        <fieldset>
+            <legend>About</legend>
+            <p>Hello! My name is <span class="highlight">Divyansh Yadav</span>. I am passionate about technology, coding, and creating innovative solutions.</p>
+        </fieldset>
+        <div class="gallery">
+            <img src="https://picsum.photos/200/300" alt="Gallery Image">
+            <img src="https://picsum.photos/200/300" alt="Gallery Image">
+            <img src="https://picsum.photos/200/300" alt="Gallery Image">
+        </div>
     </div>
-
     <footer>
         <div class="contact">
             <i class="fas fa-envelope"></i>
-            <a href="#">divyansh.yadav2023a@vitstudent.ac.in</a>
+            <a href="mailto:divyansh.yadav2023a@vitstudent.ac.in">divyansh.yadav2023a@vitstudent.ac.in</a>
         </div>
         <div class="contact">
             <i class="fas fa-phone"></i>
-            <a href="#">+91 8873655145</a>
+            <a href="tel:+918873655145">+91 8873655145</a>
         </div>
         Copyright © 2025 All rights reserved 
     </footer>
