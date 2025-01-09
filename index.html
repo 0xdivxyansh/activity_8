@@ -3,64 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Page</title>
+    <title>page</title>
     <style>
-        * {
+        *
+        {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
-
-        .hero {
+        .hero
+        {
             height: 100vh;
             width: 100%;
-            background-image: url('./background.jpg');
+            background-image: url(./background.jpg);
             background-size: cover;
             background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
         }
-
-        nav {
+        nav
+        {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 20px 10%;
-            background-color: rgba(0, 0, 0, 0.7);
+            padding-top: 40px;
+            padding-left: 10%;
+            padding-right: 10%;
         }
-
-        .logo {
-            color: white;
+        .logo
+        {
+            color: black;
             font-size: 28px;
         }
-
-        span {
+        span
+        {
             color: red;
         }
-
-        nav ul {
-            display: flex;
+        nav ul li
+        {
             list-style-type: none;
+            display: inline-block;
+            padding: 10px 20px;
         }
 
-        nav ul li {
-            margin: 0 10px;
-        }
-
-        nav ul li a {
+        nav ul li a
+        {
             color: white;
             text-decoration: none;
             font-weight: bold;
         }
-
-        nav ul li a:hover {
+        nav ul li a:hover
+        {
             color: red;
             transition: 0.3s;
         }
 
-        nav button {
+        button
+        {
             background-color: darkcyan;
             color: white;
             border: none;
@@ -68,12 +66,49 @@
             border-radius: 20px;
             cursor: pointer;
             font-weight: bold;
+            transition: .1s;
+            justify-content: space-between;
         }
-
-        nav button:hover {
+        button:hover {
             background-color: gray;
         }
+        footer
+        {
+            background-color: black;
+            color: wheat;
+            text-align: center;
+            padding: 10px;
+        }
+        .contact
+        {
+            display: block;
+            flex-direction: column;
+        }
+        .contact a
+        {
+            color: white;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
 
+        /* Style the button (link in this case) */
+        .dropdown-link {
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            display: block;
+        }
+
+        /* Change color on hover */
+        .dropdown-link:hover {
+            background-color: #0056b3;
+        }
         .dropdown-content {
             display: none;
             position: absolute;
@@ -81,88 +116,85 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             border-radius: 5px;
             padding: 10px 0;
+            z-index: 1;
         }
 
+        .dropdown-content a {
+            text-decoration: none;
+            display: block;
+            padding: 10px 20px;
+            color: #333;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Show the dropdown content when hovering over the parent */
         .dropdown:hover .dropdown-content {
             display: block;
         }
-
-        .content {
+        img
+        {
+            margin-top: 25px;
+            height: 100px;
+            width: 100px;
+            border-radius: 25%;
+            border: 3.5px solid ;
+            display: flexbox;
+            float: left;
+            margin-left: 50px;
+        
+        }
+        img:hover {
+        transform: scale(1.1);
+        transition: transform 0.2s;
+        }
+        h1
+        {
             text-align: center;
-            padding: 20px;
+            margin-top: 50px;
+            
+            box-shadow: 0 4px 20px;
+            margin-left: 15px;
+            margin-right: 15px;
         }
+    fieldset 
+    {
+        margin-top: 90px;
+        color: whitesmoke;
+        font-weight: bold;
+        font-size: 20px;
+        border: 5px solid darkcyan;
+        box-shadow: 0 4px 20px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    fieldset span
+    {
+        color: darkblue;
+        font-size: 25px;
+    }
+    fieldset legend
+    {
+        color: darkblue;
+    }
 
-        .content img {
-            margin: 10px;
-            height: 150px;
-            width: 150px;
-            border-radius: 10%;
-            transition: transform 0.3s;
-        }
-
-        .content img:hover {
-            transform: scale(1.1);
-        }
-
-        fieldset {
-            margin: 20px auto;
-            padding: 20px;
-            max-width: 800px;
-            border: 3px solid darkcyan;
-            border-radius: 5px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            background-color: rgba(255, 255, 255, 0.8);
-        }
-
-        fieldset span {
-            color: darkblue;
-            font-size: 25px;
-        }
-
-        footer {
-            background-color: black;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .footer-links {
-            margin-bottom: 10px;
-        }
-
-        .footer-links a {
-            color: lightblue;
-            text-decoration: none;
-        }
-
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
+    @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
             }
-
-            nav button {
-                margin-top: 10px;
-            }
-
-            .content img {
-                height: 100px;
-                width: 100px;
-            }
-
-            fieldset {
-                margin: 20px;
-                padding: 15px;
+            100% {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Header Section -->
     <div class="hero">
         <nav>
             <h2 class="logo"><span>DIVYANSH</span> YADAV</h2>
@@ -171,47 +203,261 @@
                 <li><a href="#">About</a></li>
                 <li><a href="#">Portfolio</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-link">Activity 1A</a>
+                <li class="dropdown"><a href="#" class="dropdown-link">Activity 1A</a>
                     <div class="dropdown-content">
                         <a href="activity1.html">Activity 1</a>
                         <a href="activity2.html">Activity 2</a>
                         <a href="activity3.html">Activity 3</a>
                     </div>
                 </li>
-                <button><a href="c1.html" style="color: white; text-decoration: none;">Sign Up</a></button>
-                <button><a href="loginform.html" style="color: white; text-decoration: none;">Login</a></button>
+                <li class="dropdown"><a href="#" class="dropdown-link">Activity 1B</a>
+                    <div class="dropdown-content">
+                        <a href="ACTIVITY21.12.2024 (1).pdf">Activity 4</a>
+                        <a href="#">Activity 5</a>
+                    </div>
+                </li>
+                <li class="dropdown"><a href="#" class="dropdown-link">Activity 1C</a>
+                    <div class="dropdown-content">
+                        <a href="c1.html">Activity 6a form1</a>
+                        <a href="loginform.html">Activity 6b form1</a>
+                       
+                        <a href="copyform2.html">Activity 6 form2</a>
+                         <a href="activity7.html">Activity 7</a>
+                    </div>
+                </li>
+                <button><a href="c1.html">Sign Up</a></button>
+                <button><a href="loginform.html">Login In</a> </button>
             </ul>
         </nav>
 
-        <!-- About Section -->
-        <fieldset>
-            <legend>About</legend>
-            <p>
-                Hello! My name is <span>Divyansh Yadav</span>. I am passionate about technology, coding, and creating innovative solutions. My journey in software development started with curiosity about how things work. I believe in <span>perseverance</span> and continuous learning.
-            </p>
-        </fieldset>
+            <img src="df.jpg" alt="my photo">
+            <h1>DIVYANSH YADAV</h1>
 
-        <!-- Image Gallery Section -->
-        <div class="content">
-            <img src="https://picsum.photos/200/300" alt="Random Image">
-            <img src="https://picsum.photos/200/301" alt="Random Image">
-            <img src="https://picsum.photos/200/302" alt="Random Image">
-            <img src="https://picsum.photos/200/303" alt="Random Image">
-        </div>
+            <fieldset>
+                <legend>About</legend>
+                <label for="">
+                    <p>
+                        Hello! My name is <span class="highlight">Divyansh Yadav</span>. 
+                        I am passionate about technology, coding, and creating innovative solutions. 
+                        My journey in the field of software development started when I was young and curious 
+                        about how things work. I believe in the power of <span class="highlight">perseverance</span> 
+                        and continuous learning.
+                    </p>
+                </label>
+            </fieldset>
+
+            <div>
+                <div>
+                    <div>
+                        <sector>
+                            <img src="https://picsum.photos/200/300"
+                        </sector>
+                    </div>
+                </div>
+            </div>
+
+
+            <div>
+                <div>
+                    <div>
+                        <sector>
+                            <img src="https://picsum.photos/200/300"
+                        </sector>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div>
+                        <sector>
+                            <img src="https://picsum.photos/200/300"
+                        </sector>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div>
+                        <sector>
+                            <img src="https://picsum.photos/200/300"
+                        </sector>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div>
+                        <sector>
+                            <img src="https://picsum.photos/200/300"
+                        </sector>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div>
+                        <sector>
+                            <img src="https://picsum.photos/200/300"
+                        </sector>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div>
+                        <sector>
+                            <img src="https://picsum.photos/200/300"
+                        </sector>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div>
+                        <sector>
+                            <img src="https://picsum.photos/200/300"
+                        </sector>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div>
+                        <sector>
+                            <img src="https://picsum.photos/200/300"
+                        </sector>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div>
+                        <sector>
+                            <img src="https://picsum.photos/200/300"
+                        </sector>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div>
+                        <sector>
+                            <img src="https://picsum.photos/200/300"
+                        </sector>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div>
+                        <sector>
+                            <img src="https://picsum.photos/200/300"
+                        </sector>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div>
+                        <sector>
+                            <img src="https://picsum.photos/200/300"
+                        </sector>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div>
+                        <sector>
+                            <img src="https://picsum.photos/200/300"
+                        </sector>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div>
+                        <sector>
+                            <img src="https://picsum.photos/200/300"
+                        </sector>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div>
+                        <sector>
+                            <img src="https://picsum.photos/200/300"
+                        </sector>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div>
+                        <sector>
+                            <img src="https://picsum.photos/200/300"
+                        </sector>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div>
+                        <sector>
+                            <img src="https://picsum.photos/200/300"
+                        </sector>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div>
+                        <sector>
+                            <img src="https://picsum.photos/200/300"
+                        </sector>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div>
+                        <sector>
+                            <img src="https://picsum.photos/200/300"
+                        </sector>
+                    </div>
+                </div>
+            </div>
     </div>
 
-    <!-- Footer Section -->
     <footer>
-        <div class="footer-links">
+        <div class="contact">
             <i class="fas fa-envelope"></i>
-            <a href="mailto:divyansh.yadav2023a@vitstudent.ac.in">divyansh.yadav2023a@vitstudent.ac.in</a>
+            <a href="#">divyansh.yadav2023a@vitstudent.ac.in</a>
         </div>
-        <div class="footer-links">
+        <div class="contact">
             <i class="fas fa-phone"></i>
-            <a href="tel:+918873655145">+91 8873655145</a>
+            <a href="#">+91 8873655145</a>
         </div>
-        <p>Copyright &copy; 2025 All rights reserved</p>
+        Copyright © 2025 All rights reserved 
     </footer>
 </body>
 </html>
