@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+        }
+        .form-container
+        {
+            background-color: white;
+            padding: 20px;
+            border: 5px solid darkcyan;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+        }
+        .form-container h2
+        {
+            margin: 0 0 10px;
+            text-align: left;
+        }
+        .form-container p
+        {
+            text-align: center;
+            color: gray;
+            margin-bottom: 20px;
+        }
+        .form
+        {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group
+        {
+            position: relative;
+            margin-bottom: 15px;
+            
+        }
+        .form-group input
+        {
+            width: 80%;
+            padding: 10px 10px 10px 40px; 
+            font-size: 16px;
+            border: 1px solid #ccc;
+            
+        }
+        .form-group input:focus
+        {
+            outline: none;
+            border-color: darkcyan;
+        }
+        .form-group .icon
+        {
+           
+            position: absolute;
+            top: 25%;
+            left: 15px;
+            transform: translate(-50%);
+            font-size: 18px;
+            color: gray;
+        }
+        
+        
+        .input-checkbox
+        {
+            margin:10px 0;
+            display: flex;
+        }
+        .input-checkbox span 
+        {
+            margin-left: 5px;
+            color: darkcyan;
+            cursor: pointer;
+        }
+        .button
+        {
+        
+            background-color: darkcyan;
+            color: white;
+
+            border: 0 solid white;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        button:hover
+        {
+            background-color: grey;
+        }
+        
+    </style>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="form-container">
+        <form class="form" id="signup-form">
+            <h2>Sign Up</h2>
+            <p style="color: gray;">Please fill in this form to create an account!</p>
+
+            <div class="form-group">
+                <i class="fas fa-user icon"></i>
+               <input type="text" id="signup-name" name="fullname" placeholder="username">  
+            </div>
+           
+            <div class="form-group">
+                <i class="fas fa-envelope icon"></i>
+               <input type="text" id="email" placeholder="Email Address"> 
+            </div>
+            
+            <div class="form-group">
+                <i class="fas fa-lock icon"></i>
+                <input type="text" id="password" placeholder="password">
+            </div>
+            
+            <div class="form-group">
+                <i class="fas fa-lock icon"></i>
+                <input type="text" id="conformpassword" placeholder="confirm password">
+            </div>
+            
+           <div class="input-checkbox">
+            <input type="checkbox" id="terms" required>
+                <label for="terms" style="font-size: 15px;">I accept the <span>Terms of Use</span> & <span>Privacy Policy</span></label>
+        </div>
+            <button class="button">Sign up</button> 
+        </form>
+    </div>
+    
+</body>
+</html>
+
+
+
+
